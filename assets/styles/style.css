@@ -1,0 +1,168 @@
+:root {
+  --maroon: #770a29;
+  --green: #029000;
+  --yellow: #fdfe01;
+  --gray: #535353;
+  --background: #f5f5f5;
+  --menu: #a90939;
+  --menubox: 85px;
+  --listbox: 200px;
+  --h1: var(--maroon);
+  --p: var(--gray);
+  --a: var(--gray);
+  --main: "Roboto";
+  --icons: 20px;
+  --menuicons: 30px;
+  --listicons: 30px;
+  --fcatlogo: 50px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: var(--main);
+  color: var(--p);
+}
+
+body {
+  background: var(--background);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.sidebar {
+  z-index: 2;
+  background: white;
+  width: 225px;
+  height: 100vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.sidebar header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  margin: 20px 0;
+}
+.sidebar header img {
+  height: var(--fcatlogo);
+  margin-right: 5px;
+}
+.sidebar header h1 {
+  color: var(--maroon);
+  margin-left: 5px;
+}
+.sidebar nav {
+  margin: 50px 0 0 0;
+  text-align: center;
+}
+.sidebar nav a.button {
+  background-color: var(--menu);
+  color: white;
+  padding: 10px 50px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+.sidebar nav ul {
+  text-align: left;
+  margin-left: 30px;
+  color: var(--gray);
+  font-weight: 600;
+}
+.sidebar nav .icon {
+  height: var(--icons);
+  float: inline-start;
+  margin-right: 5px;
+}
+.sidebar nav .top {
+  margin-top: 50px;
+}
+.sidebar nav .top li {
+  margin: 25px 0;
+}
+.sidebar nav .bottom {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 30px;
+}
+
+.hero {
+  width: calc(100vw - 225px);
+}
+.hero .container .menu::-webkit-scrollbar {
+  display: none;
+}
+.hero .container form {
+  padding: 10px;
+  text-align: center;
+}
+.hero .container form .search {
+  width: 90%;
+}
+.hero .container .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 150px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.hero .container .menu .box {
+  background: white;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px;
+}
+.hero .container .menu .box .box-container {
+  height: 120px;
+  width: 120px;
+}
+.hero .container .menu .box .box-container img {
+  height: var(--menuicons);
+  padding: 10px;
+}
+.hero .container .menu .box .box-container h1 {
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.hero .container .list {
+  display: flex;
+  flex-direction: row;
+}
+.hero .container .list .box {
+  background: white;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px;
+}
+.hero .container .list .box .box-container {
+  height: 300px;
+  width: 250px;
+}
+.hero .container .list .box .box-container img {
+  width: 90%;
+  padding: 10px;
+  display: block;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero .container .list .box .box-container h1 {
+  margin-top: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.hero .container .list .box .box-container h2 {
+  color: var(--green);
+  padding-left: 10px;
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */
