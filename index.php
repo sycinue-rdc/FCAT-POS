@@ -38,7 +38,7 @@
             <div class="burger"></div>
 
             <form action="" method="post">
-                <input type="search" name="search" id="search" class="search">
+                <input type="search" name="search" id="search" class="search" placeholder="Search...">
             </form>
 
             <section class="menu">
@@ -93,12 +93,202 @@
                         
                         <h2>₱ 50.00</h2>
 
-                        <div class="buttons">
-                            
+                        <div class="button">
+                            <p>Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <h1>Cluckin Big!</h1>
+                        
+                        <h2>₱ 50.00</h2>
+
+                        <div class="button">
+                            <p>Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <h1>Cluckin Big!</h1>
+                        
+                        <h2>₱ 50.00</h2>
+
+                        <div class="button">
+                            <p>Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <h1>Cluckin Big!</h1>
+                        
+                        <h2>₱ 50.00</h2>
+
+                        <div class="button">
+                            <p>Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <h1>Cluckin Big!</h1>
+                        
+                        <h2>₱ 50.00</h2>
+
+                        <div class="button">
+                            <p>Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <h1>Cluckin Big!</h1>
+                        
+                        <h2>₱ 50.00</h2>
+
+                        <div class="button">
+                            <p>Add to Cart</p>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <section class="tables">
+                <div class="table">
+                    <h1>T#</h1>
+                    <p>Menard</p>
+                </div>
+                <div class="table">
+                    <h1>T#</h1>
+                    <p>Kim</p>
+                </div>
+                <div class="table">
+                    <h1>T#</h1>
+                    <p>Vergel</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="orderqueue">
+        <div class="container">
+            <header>
+                <h1>Table 1</h1>
+                <p>Eunicys</p>
+            </header>
+
+            <div class="method">
+                <p class="selected">Dine In</p>
+                <p>Take Out</p>
+            </div>
+
+            <div class="queue">
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <div class="info">
+                            <h1 class="itmname">Cluckin Big!</h1>
+                            <div class="sub-info">
+                                <h2 class="itmprice">₱ 50.00</h2>
+                                <h2 class="itmquantity">1x</h2>
+                                <h2 class="ttlprice">₱ 50.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <div class="info">
+                            <h1 class="itmname">Cluckin Big!</h1>
+                            <div class="sub-info">
+                                <h2 class="itmprice">₱ 50.00</h2>
+                                <h2 class="itmquantity">1x</h2>
+                                <h2 class="ttlprice">₱ 50.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <div class="info">
+                            <h1 class="itmname">Cluckin Big!</h1>
+                            <div class="sub-info">
+                                <h2 class="itmprice">₱ 50.00</h2>
+                                <h2 class="itmquantity">1x</h2>
+                                <h2 class="ttlprice">₱ 50.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <div class="info">
+                            <h1 class="itmname">Cluckin Big!</h1>
+                            <div class="sub-info">
+                                <h2 class="itmprice">₱ 50.00</h2>
+                                <h2 class="itmquantity">1x</h2>
+                                <h2 class="ttlprice">₱ 50.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <div class="info">
+                            <h1 class="itmname">Cluckin Big!</h1>
+                            <div class="sub-info">
+                                <h2 class="itmprice">₱ 50.00</h2>
+                                <h2 class="itmquantity">1x</h2>
+                                <h2 class="ttlprice">₱ 50.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-container">
+                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
+
+                        <div class="info">
+                            <h1 class="itmname">Cluckin Big!</h1>
+                            <div class="sub-info">
+                                <h2 class="itmprice">₱ 50.00</h2>
+                                <h2 class="itmquantity">1x</h2>
+                                <h2 class="ttlprice">₱ 50.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="itmpricecalc">
+                <h2 class="sub-ttl">Sub-Total</h2>
+                <h2 class="tax">Tax %</h2>
+                <hr>
+                <h2 class="ttlprice">Total Amount</h2>
+            </div>
+
+            <h1 class="placeorder">Place Order</h1>
         </div>
     </div>
 </body>

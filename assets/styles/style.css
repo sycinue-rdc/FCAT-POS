@@ -5,14 +5,16 @@
   --gray: #535353;
   --background: #f5f5f5;
   --menu: #a90939;
-  --menubox: 85px;
+  --menubox: 106px;
   --listbox: 200px;
+  --lbarwidth: 225px;
+  --rbarwidth: 420px;
   --h1: var(--maroon);
   --p: var(--gray);
   --a: var(--gray);
   --main: "Roboto";
   --icons: 20px;
-  --menuicons: 30px;
+  --menuicons: 25px;
   --listicons: 30px;
   --fcatlogo: 50px;
 }
@@ -37,7 +39,7 @@ body {
 .sidebar {
   z-index: 2;
   background: white;
-  width: 225px;
+  width: var(--lbarwidth);
   height: 100vh;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -93,7 +95,7 @@ body {
 }
 
 .hero {
-  width: calc(100vw - 225px);
+  width: calc(100vw - var(--lbarwidth) - var(--rbarwidth));
 }
 .hero .container .menu::-webkit-scrollbar {
   display: none;
@@ -104,13 +106,16 @@ body {
 }
 .hero .container form .search {
   width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
 }
 .hero .container .menu {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
-  height: 150px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -122,21 +127,24 @@ body {
   border-radius: 20px;
 }
 .hero .container .menu .box .box-container {
-  height: 120px;
-  width: 120px;
+  height: var(--menubox);
+  width: var(--menubox);
 }
 .hero .container .menu .box .box-container img {
   height: var(--menuicons);
   padding: 10px;
 }
 .hero .container .menu .box .box-container h1 {
-  margin-top: 20px;
   padding-left: 10px;
-  font-size: 16px;
+  font-size: 12px;
 }
 .hero .container .list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  height: calc(100vh - var(--menubox) - 20px - 56px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: nowrap;
 }
 .hero .container .list .box {
   background: white;
@@ -145,11 +153,12 @@ body {
   border-radius: 20px;
 }
 .hero .container .list .box .box-container {
-  height: 300px;
-  width: 250px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
 }
 .hero .container .list .box .box-container img {
-  width: 90%;
+  width: 150px;
   padding: 10px;
   display: block;
   border-radius: 20px;
@@ -157,12 +166,159 @@ body {
   margin-right: auto;
 }
 .hero .container .list .box .box-container h1 {
-  margin-top: 10px;
-  padding-left: 10px;
+  margin: 10px;
+  text-wrap: pretty;
+  text-align: justify;
   font-size: 16px;
 }
 .hero .container .list .box .box-container h2 {
   color: var(--green);
   padding-left: 10px;
   font-size: 14px;
+}
+.hero .container .list .box .box-container .button {
+  font-weight: 800;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.hero .container .tables {
+  display: flex;
+  flex-direction: row;
+}
+.hero .container .tables .table {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  color: var(--gray);
+  margin: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 180px;
+  border-radius: 50px;
+}
+.hero .container .tables .table h1 {
+  background-color: yellow;
+  border-radius: 100%;
+  padding: 10px;
+}
+.hero .container .tables .table p {
+  align-content: center;
+  margin-left: 10px;
+}
+
+.orderqueue {
+  z-index: 2;
+  background: white;
+  width: var(--rbarwidth);
+  height: 100vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.orderqueue .container {
+  padding: 20px;
+}
+.orderqueue .container header h1 {
+  color: var(--maroon);
+  font-size: 25px;
+}
+.orderqueue .container .method {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  background: var(--background);
+  border-radius: 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.orderqueue .container .method p {
+  font-weight: 800;
+  padding: 10px;
+  width: 120px;
+}
+.orderqueue .container .method .selected {
+  background: var(--menu);
+  color: white;
+  width: 120px;
+  border-radius: 10px;
+}
+.orderqueue .container .queue {
+  width: 100%;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+.orderqueue .container .queue .box {
+  background: var(--background);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}
+.orderqueue .container .queue .box .box-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.orderqueue .container .queue .box .box-container img {
+  height: 60px;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.orderqueue .container .queue .box .box-container .info {
+  margin-left: 10px;
+  width: 100%;
+}
+.orderqueue .container .queue .box .box-container .info h1 {
+  text-wrap: pretty;
+  text-align: justify;
+  font-size: 16px;
+}
+.orderqueue .container .queue .box .box-container .info .sub-info {
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.orderqueue .container .queue .box .box-container .info .sub-info .itmquantity {
+  color: var(--gray);
+}
+.orderqueue .container .queue .box .box-container .info .sub-info h2 {
+  align-content: flex-end;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 300;
+}
+.orderqueue .container .itmpricecalc {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  font-size: 10px;
+}
+.orderqueue .container .itmpricecalc hr {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.orderqueue .container .itmpricecalc h2 {
+  margin: 5px 0;
+}
+.orderqueue .container .placeorder {
+  background: var(--menu);
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
