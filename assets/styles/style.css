@@ -64,18 +64,12 @@ body {
   margin: 50px 0 0 0;
   text-align: center;
 }
-.sidebar nav a.button {
-  background-color: var(--menu);
-  color: white;
-  padding: 10px 50px;
-  border-radius: 50px;
-  font-weight: 600;
-}
 .sidebar nav ul {
   text-align: left;
   margin-left: 30px;
   color: var(--gray);
   font-weight: 600;
+  position: relative; /* Position relative for the indicator */
 }
 .sidebar nav .icon {
   height: var(--icons);
@@ -84,14 +78,42 @@ body {
 }
 .sidebar nav .top {
   margin-top: 50px;
+  /* Active button styles */
 }
 .sidebar nav .top li {
-  margin: 25px 0;
+  padding: 20px 0;
+  position: relative; /* Position relative for each button */
 }
-.sidebar nav .bottom {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 30px;
+.sidebar nav .top button {
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative; /* Allow background transition */
+  z-index: 1; /* Ensure the button is above the indicator */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+.sidebar nav .top #tableManagement.active {
+  color: white;
+}
+.sidebar nav .top #orderManagement.active {
+  color: white;
+}
+.sidebar nav .top #reports.active {
+  color: white;
+}
+.sidebar nav .top #settings.active {
+  color: white;
+}
+.sidebar nav .button-indicator {
+  background: var(--maroon);
+  margin: 5px 0 0 -15px;
+  padding: 25px 0;
+  width: 100%;
+  border-radius: 50px;
+  position: absolute; /* Position it absolutely within the ul */
+  transition: top 0.3s ease; /* Smooth transition for sliding */
+  z-index: 0; /* Place the indicator behind the buttons */
 }
 
 .hero {
@@ -110,6 +132,7 @@ body {
   border: none;
   border-radius: 10px;
   font-weight: 800;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 .hero .container .menu {
   display: flex;
@@ -136,12 +159,12 @@ body {
 }
 .hero .container .menu .box .box-container h1 {
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .hero .container .list {
   display: flex;
   flex-wrap: wrap;
-  height: calc(100vh - var(--menubox) - 20px - 56px);
+  height: calc(100vh - 20px - 36px - 126px - 89px);
   overflow-x: hidden;
   overflow-y: auto;
   white-space: nowrap;
@@ -187,8 +210,11 @@ body {
 .hero .container .tables {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: auto;
+  white-space: nowrap;
 }
-.hero .container .tables .table {
+.hero .container .tables .table .table-container {
   background: white;
   display: flex;
   flex-direction: row;
@@ -196,15 +222,15 @@ body {
   margin: 10px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 180px;
   border-radius: 50px;
+  width: 170px;
 }
-.hero .container .tables .table h1 {
+.hero .container .tables .table .table-container h1 {
   background-color: yellow;
   border-radius: 100%;
   padding: 10px;
 }
-.hero .container .tables .table p {
+.hero .container .tables .table .table-container p {
   align-content: center;
   margin-left: 10px;
 }
@@ -224,29 +250,44 @@ body {
   font-size: 25px;
 }
 .orderqueue .container .method {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
   background: var(--background);
+  display: flex;
+  position: relative; /* Ensure the indicator is positioned correctly */
+  flex-direction: row;
   border-radius: 12px;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
   width: -moz-fit-content;
   width: fit-content;
-  margin-top: 50px;
-  margin-bottom: 25px;
-  border: 1px rgba(0, 0, 0, 0.2) solid;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 25px auto;
 }
-.orderqueue .container .method p {
+.orderqueue .container .method button {
   font-weight: 800;
-  padding: 10px;
-  width: 120px;
+  padding: 15px;
+  width: 160px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  z-index: 1;
+  transition: background 0.3s ease; /* Add transition for the background */
 }
-.orderqueue .container .method .selected {
-  background: var(--menu);
+.orderqueue .container .method #dineIn.active {
   color: white;
-  width: 120px;
+}
+.orderqueue .container .method #takeOut.active {
+  color: white;
+}
+.orderqueue .container .method .indicator {
+  background: var(--maroon);
+  position: absolute; /* Position it absolutely within the method */
+  bottom: 0; /* Align at the bottom */
+  left: 0; /* Start from the left */
+  width: 50%; /* Half the width of the button container */
+  height: 100%; /* Match the height of the buttons */
   border-radius: 10px;
+  transition: left 0.3s ease; /* Smooth transition for sliding */
+  z-index: 0; /* Place the indicator behind the buttons */
 }
 .orderqueue .container .queue {
   width: 100%;
@@ -314,7 +355,7 @@ body {
   margin: 5px 0;
 }
 .orderqueue .container .placeorder {
-  background: var(--menu);
+  background: var(--maroon);
   color: white;
   font-size: 18px;
   padding: 10px;

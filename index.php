@@ -14,22 +14,25 @@
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
+    
     <div class="sidebar">
         <header>
             <img src="assets/imgs/fcat.png" alt="fcatlogo">
             <h1>FCAT POS</h1>
         </header>
+
         <nav>
-            <a class="button" href="#">MENU</a>
             <ul class="top">
-                <li><a href="#"><img src="assets/imgs/menu.png" alt="icon" class="icon">Table Management</a></li>
-                <li><a href="#"><img src="assets/imgs/menu.png" alt="icon" class="icon">Order Management</a></li>
-                <li><a href="#"><img src="assets/imgs/menu.png" alt="icon" class="icon">Reports</a></li>
-                <li><a href="#"><img src="assets/imgs/menu.png" alt="icon" class="icon">Settings</a></li>
+                <div class="button-indicator"></div>
+                <li><button id="tableManagement" class="active"><img src="assets/imgs/menu.png" alt="icon" class="icon">Table Management</button></li>
+                <li><button id="orderManagement"><img src="assets/imgs/menu.png" alt="icon" class="icon">Order Management</button></li>
+                <li><button id="reports"><img src="assets/imgs/menu.png" alt="icon" class="icon">Reports</button></li>
+                <li><button id="settings"><img src="assets/imgs/menu.png" alt="icon" class="icon">Settings</button></li>
             </ul>
-            <ul class="bottom">
+
+            <!-- <ul class="bottom">
             <li><a href="#"><img src="assets/imgs/menu.png" alt="icon" class="icon">Logout</a></li>
-            </ul>
+            </ul> -->
         </nav>
     </div>
 
@@ -166,17 +169,40 @@
             </section>
 
             <section class="tables">
+                
                 <div class="table">
-                    <h1>T#</h1>
-                    <p>Menard</p>
+                    <div class="table-container">
+                        <h1>T1</h1>
+                        <p>Eunicys</p>
+                    </div>
                 </div>
+
                 <div class="table">
-                    <h1>T#</h1>
-                    <p>Kim</p>
+                    <div class="table-container">
+                        <h1>T2</h1>
+                        <p>Joshua</p>
+                    </div>
                 </div>
+
                 <div class="table">
-                    <h1>T#</h1>
-                    <p>Vergel</p>
+                    <div class="table-container">
+                        <h1>T3</h1>
+                        <p>Menard</p>
+                    </div>
+                </div>
+
+                <div class="table">
+                    <div class="table-container">
+                        <h1>T4</h1>
+                        <p>Kim</p>
+                    </div>
+                </div>
+
+                <div class="table">
+                    <div class="table-container">
+                        <h1>T5</h1>
+                        <p>Vergel</p>
+                    </div>
                 </div>
             </section>
         </div>
@@ -185,13 +211,14 @@
     <div class="orderqueue">
         <div class="container">
             <header>
-                <h1>Table 1</h1>
-                <p>Eunicys</p>
+                <h1>Table 6</h1>
+                <p>Shairence</p>
             </header>
 
             <div class="method">
-                <p class="selected">Dine In</p>
-                <p>Take Out</p>
+                <div class="indicator"></div>
+                <button id="dineIn" class="active">Dine In</button>
+                <button id="takeOut">Take Out</button>
             </div>
 
             <div class="queue">
@@ -291,5 +318,7 @@
             <h1 class="placeorder">Place Order</h1>
         </div>
     </div>
+
+    <script src="assets/js/slide.js"></script>
 </body>
 </html>
