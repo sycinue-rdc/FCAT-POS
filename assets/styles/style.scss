@@ -44,11 +44,19 @@
     color: var(--p);
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background: var(--background);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+
+    button {
+        cursor: pointer;
+    }
 }
 
 .sidebar {
@@ -158,24 +166,23 @@ body {
             float: inline-start;
             margin-right: 5px;
         }
-    
+        
+        button {
+            background: transparent;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            position: relative; /* Allow background transition */
+            z-index: 1; /* Ensure the button is above the indicator */
+            transition: background 0.3s ease; /* Smooth background transition */
+        }
+
         .top {
             margin-top: 50px;
     
             li {
-                // margin: 25px 0;
                 padding: 20px 0;
                 position: relative; /* Position relative for each button */
-            }
-    
-            button {
-                background: transparent;
-                border: none;
-                font-weight: 600;
-                font-size: 16px;
-                position: relative; /* Allow background transition */
-                z-index: 1; /* Ensure the button is above the indicator */
-                transition: background 0.3s ease; /* Smooth background transition */
             }
     
             /* Active button styles */
@@ -194,6 +201,12 @@ body {
             #settings.active {
                 color: white;
             }
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 50px;
         }
     
         .button-indicator {
@@ -267,7 +280,7 @@ body {
 
         .list {
             display: flex;
-            // flex-direction: row;
+            flex-direction: row;
             flex-wrap: wrap;
             height: calc(100vh - 20px - 36px - 126px - 89px);
             overflow-x: hidden;
@@ -276,13 +289,12 @@ body {
 
             .box {
                 background: white;
+                height: fit-content;
                 margin: 10px;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 border-radius: 20px;
         
                 .box-container {
-                    // height: 350px;
-                    // width: 213px;
                     width: fit-content;
                     padding: 10px;
 
@@ -300,8 +312,6 @@ body {
                         margin: 10px;
                         text-wrap: pretty;
                         text-align: justify;
-                        // margin-top: 10px;
-                        // padding-left: 10px;
                         font-size: 16px;
                     }
 
@@ -311,14 +321,63 @@ body {
                         font-size: 14px;
                     }
 
-                    .button {
+                    .addcartbtn {
+                        height: 39px;
+                        width: 100%;
                         font-weight: 800;
+                        font-size: 16px;
                         text-align: center;
+                        background: white;
                         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                         margin: 10px auto;
-                        // width: 100%;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 10px;
+                    }
+
+                    .ordernum {
+                        font-weight: 800;
+                        text-align: center;
+                        margin: 10px auto;
                         padding: 10px;
                         border-radius: 10px;
+                        box-shadow: rgb(204, 219, 232) 3px 3px 6px 3px inset, rgba(255, 255, 255, 0.5) 3px 3px 6px 3px inset;
+
+                        .quantity {
+                            
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            input {
+                                text-align: center;
+                                border: none;
+                                font-weight: 800;
+                                font-size: 16px;
+                            }
+
+                            button {
+                                border: 0;
+                                background: var(--green);
+                                color: white;
+                                font-weight: 800;
+                                font-size: 16px;
+                                width: 28px;
+                                height: 28px;
+                                margin: -5px;
+                                border-radius: 100%;
+
+                                
+                            }
+
+                            .minus {
+                                margin-left: 2.5px;
+                            }
+
+                            .plus {
+                                margin-right: 2.5px;
+                            }
+                        }
                     }
                 }
             }

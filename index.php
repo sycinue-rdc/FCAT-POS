@@ -30,9 +30,9 @@
                 <li><button id="settings"><img src="assets/imgs/menu.png" alt="icon" class="icon">Settings</button></li>
             </ul>
 
-            <!-- <ul class="bottom">
-            <li><a href="#"><img src="assets/imgs/menu.png" alt="icon" class="icon">Logout</a></li>
-            </ul> -->
+            <ul class="bottom">
+            <li><button id="logout"><img src="assets/imgs/menu.png" alt="icon" class="icon">Logout</button></li>
+            </ul>
         </nav>
     </div>
 
@@ -96,9 +96,12 @@
                         
                         <h2>₱ 50.00</h2>
 
-                        <div class="button">
-                            <p>Add to Cart</p>
-                        </div>
+                        <!-- <div class="addcartbtn">
+
+                            </div> -->
+                        <button class="addcartbtn">Add to Cart</button>
+
+
                     </div>
                 </div>
                 <div class="box">
@@ -109,63 +112,17 @@
                         
                         <h2>₱ 50.00</h2>
 
-                        <div class="button">
-                            <p>Add to Cart</p>
+                        <div class="ordernum">
+                            <div class="quantity">
+                                <button class="minus" aria-label="Decrease">&minus;</button>
+                                <input type="number" class="input-box" value="1" min="1" max="999">
+                                <button class="plus" aria-label="Increase">&plus;</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
 
-                        <h1>Cluckin Big!</h1>
-                        
-                        <h2>₱ 50.00</h2>
 
-                        <div class="button">
-                            <p>Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <h1>Cluckin Big!</h1>
-                        
-                        <h2>₱ 50.00</h2>
-
-                        <div class="button">
-                            <p>Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <h1>Cluckin Big!</h1>
-                        
-                        <h2>₱ 50.00</h2>
-
-                        <div class="button">
-                            <p>Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <h1>Cluckin Big!</h1>
-                        
-                        <h2>₱ 50.00</h2>
-
-                        <div class="button">
-                            <p>Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <section class="tables">
@@ -319,6 +276,6 @@
         </div>
     </div>
 
-    <script src="assets/js/slide.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>

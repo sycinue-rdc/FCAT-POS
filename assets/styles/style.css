@@ -29,11 +29,18 @@
   color: var(--p);
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background: var(--background);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+body button {
+  cursor: pointer;
 }
 
 .sidebar {
@@ -76,15 +83,7 @@ body {
   float: inline-start;
   margin-right: 5px;
 }
-.sidebar nav .top {
-  margin-top: 50px;
-  /* Active button styles */
-}
-.sidebar nav .top li {
-  padding: 20px 0;
-  position: relative; /* Position relative for each button */
-}
-.sidebar nav .top button {
+.sidebar nav button {
   background: transparent;
   border: none;
   font-weight: 600;
@@ -92,6 +91,14 @@ body {
   position: relative; /* Allow background transition */
   z-index: 1; /* Ensure the button is above the indicator */
   transition: background 0.3s ease; /* Smooth background transition */
+}
+.sidebar nav .top {
+  margin-top: 50px;
+  /* Active button styles */
+}
+.sidebar nav .top li {
+  padding: 20px 0;
+  position: relative; /* Position relative for each button */
 }
 .sidebar nav .top #tableManagement.active {
   color: white;
@@ -104,6 +111,11 @@ body {
 }
 .sidebar nav .top #settings.active {
   color: white;
+}
+.sidebar nav .bottom {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
 }
 .sidebar nav .button-indicator {
   background: var(--maroon);
@@ -163,6 +175,7 @@ body {
 }
 .hero .container .list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   height: calc(100vh - 20px - 36px - 126px - 89px);
   overflow-x: hidden;
@@ -171,6 +184,8 @@ body {
 }
 .hero .container .list .box {
   background: white;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 20px;
@@ -199,13 +214,54 @@ body {
   padding-left: 10px;
   font-size: 14px;
 }
-.hero .container .list .box .box-container .button {
+.hero .container .list .box .box-container .addcartbtn {
+  height: 39px;
+  width: 100%;
   font-weight: 800;
+  font-size: 16px;
   text-align: center;
+  background: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 10px auto;
   padding: 10px;
+  border: none;
   border-radius: 10px;
+}
+.hero .container .list .box .box-container .ordernum {
+  font-weight: 800;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 3px inset, rgba(255, 255, 255, 0.5) 3px 3px 6px 3px inset;
+}
+.hero .container .list .box .box-container .ordernum .quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hero .container .list .box .box-container .ordernum .quantity input {
+  text-align: center;
+  border: none;
+  font-weight: 800;
+  font-size: 16px;
+}
+.hero .container .list .box .box-container .ordernum .quantity button {
+  border: 0;
+  background: var(--green);
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+  margin: -5px;
+  border-radius: 100%;
+}
+.hero .container .list .box .box-container .ordernum .quantity .minus {
+  margin-left: 2.5px;
+}
+.hero .container .list .box .box-container .ordernum .quantity .plus {
+  margin-right: 2.5px;
 }
 .hero .container .tables {
   display: flex;
