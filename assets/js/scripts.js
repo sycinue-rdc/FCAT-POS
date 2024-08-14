@@ -87,3 +87,14 @@ dineOutButton.addEventListener('click', () => {
     }
   })();
   
+// ======================================================= Onclick Button Show
+const incqueue = document.getElementsByClassName('minus');
+const decqueue = document.getElementsByClassName('plus');
+const quantityvalue = document.getElementsByClassName('itmquantity');
+
+function addcart(){
+  document.getElementById('ordrnum').style.display='block';
+  document.getElementById('ordrlist').style.display='block';
+  document.getElementById('addcart').style.display='none';
+  document.getElementById('hero').style.width='calc(100vw - 225px - 420px';
+}

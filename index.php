@@ -36,7 +36,7 @@
         </nav>
     </div>
 
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="container">
             <div class="burger"></div>
 
@@ -45,45 +45,45 @@
             </form>
 
             <section class="menu">
-                <div class="box">
+                <button class="box">
                     <div class="box-container">
                         <img src="assets/imgs/menu.png" alt="icon" class="icon">
 
                         <h1>All Menu</h1>
                     </div>
-                </div>
+                </button>
                 
-                <div class="box">
+                <button class="box">
                     <div class="box-container">
                         <img src="assets/imgs/menu.png" alt="icon" class="icon">
 
                         <h1>Breakfast</h1>
                     </div>
-                </div>
-
-                <div class="box">
+                </button>
+                
+                <button class="box">
                     <div class="box-container">
                         <img src="assets/imgs/menu.png" alt="icon" class="icon">
 
                         <h1>Soup</h1>
                     </div>
-                </div>
-
-                <div class="box">
+                </button>
+                
+                <button class="box">
                     <div class="box-container">
                         <img src="assets/imgs/menu.png" alt="icon" class="icon">
 
                         <h1>Drinks</h1>
                     </div>
-                </div>
-
-                <div class="box">
+                </button>
+                
+                <button class="box">
                     <div class="box-container">
                         <img src="assets/imgs/menu.png" alt="icon" class="icon">
 
                         <h1>Main Course</h1>
                     </div>
-                </div>
+                </button>
 
             </section>
 
@@ -96,32 +96,18 @@
                         
                         <h2>₱ 50.00</h2>
 
-                        <!-- <div class="addcartbtn">
+                        <button class="addcartbtn" id="addcart" onclick='addcart();'>Add to Cart</button>
 
-                            </div> -->
-                        <button class="addcartbtn">Add to Cart</button>
-
-
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <h1>Cluckin Big!</h1>
-                        
-                        <h2>₱ 50.00</h2>
-
-                        <div class="ordernum">
+                        <div class="ordernum" id="ordrnum" style="display:none;">
                             <div class="quantity">
                                 <button class="minus" aria-label="Decrease">&minus;</button>
                                 <input type="number" class="input-box" value="1" min="1" max="999">
                                 <button class="plus" aria-label="Increase">&plus;</button>
                             </div>
                         </div>
+
                     </div>
                 </div>
-
 
             </section>
 
@@ -165,7 +151,7 @@
         </div>
     </div>
 
-    <div class="orderqueue">
+    <div class="orderqueue" id="ordrlist" style="display: none;">
         <div class="container">
             <header>
                 <h1>Table 6</h1>
@@ -186,79 +172,9 @@
                         <div class="info">
                             <h1 class="itmname">Cluckin Big!</h1>
                             <div class="sub-info">
-                                <h2 class="itmprice">₱ 50.00</h2>
-                                <h2 class="itmquantity">1x</h2>
-                                <h2 class="ttlprice">₱ 50.00</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <div class="info">
-                            <h1 class="itmname">Cluckin Big!</h1>
-                            <div class="sub-info">
-                                <h2 class="itmprice">₱ 50.00</h2>
-                                <h2 class="itmquantity">1x</h2>
-                                <h2 class="ttlprice">₱ 50.00</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <div class="info">
-                            <h1 class="itmname">Cluckin Big!</h1>
-                            <div class="sub-info">
-                                <h2 class="itmprice">₱ 50.00</h2>
-                                <h2 class="itmquantity">1x</h2>
-                                <h2 class="ttlprice">₱ 50.00</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <div class="info">
-                            <h1 class="itmname">Cluckin Big!</h1>
-                            <div class="sub-info">
-                                <h2 class="itmprice">₱ 50.00</h2>
-                                <h2 class="itmquantity">1x</h2>
-                                <h2 class="ttlprice">₱ 50.00</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <div class="info">
-                            <h1 class="itmname">Cluckin Big!</h1>
-                            <div class="sub-info">
-                                <h2 class="itmprice">₱ 50.00</h2>
-                                <h2 class="itmquantity">1x</h2>
-                                <h2 class="ttlprice">₱ 50.00</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-container">
-                        <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
-
-                        <div class="info">
-                            <h1 class="itmname">Cluckin Big!</h1>
-                            <div class="sub-info">
-                                <h2 class="itmprice">₱ 50.00</h2>
-                                <h2 class="itmquantity">1x</h2>
-                                <h2 class="ttlprice">₱ 50.00</h2>
+                                <h2 class="itmprice">${itmvalue}</h2>
+                                <h2 class="itmquantity">${itmquantity}</h2>
+                                <h2 class="ttlprice">${price}</h2>
                             </div>
                         </div>
                     </div>
@@ -266,13 +182,24 @@
             </div>
 
             <div class="itmpricecalc">
-                <h2 class="sub-ttl">Sub-Total</h2>
-                <h2 class="tax">Tax %</h2>
+                <div class="top">
+                    <div class="left">
+                        <h2 class="sub-ttl">Sub-Total</h2>
+                        <h2 class="tax">Tax %</h2>
+                    </div>
+                    <div class="right">
+                        <h2>${subttlvalue}</h2>
+                        <h2>${taxvalue}</h2>
+                    </div>
+                </div>
                 <hr>
-                <h2 class="ttlprice">Total Amount</h2>
+                <div class="bottom">
+                    <h2 class="ttlprice">Total Amount</h2>
+                    <h2>${ttlamountvalue}</h2>
+                </div>
             </div>
 
-            <h1 class="placeorder">Place Order</h1>
+            <button class="placeorder" id="placeOrder">Place Order</button>
         </div>
     </div>
 

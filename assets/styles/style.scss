@@ -86,69 +86,6 @@ body {
         }
     }
 
-    // nav {
-    //     margin: 50px 0 0 0;
-    //     text-align: center;
-
-    //     a.button {
-    //         background-color: var(--maroon);
-    //         color: white;
-    //         padding: 10px 50px;
-    //         border-radius: 50px;
-    //         font-weight: 600; 
-    //     }
-
-    //     ul {
-    //         text-align: left;
-    //         margin-left: 30px;
-    //         color: var(--gray);
-    //         font-weight: 600;
-    //         position: relative;
-    //     }
-
-    //     .icon {
-    //         height: var(--icons);
-    //         float: inline-start;
-    //         margin-right: 5px;
-    //     }
-
-    //     .top {
-    //         margin-top: 50px;
-
-    //         li {
-    //             margin: 25px 0;
-    //             position: relative;
-
-    //             button {
-    //                 background: transparent;
-    //                 border: none;
-    //                 font-weight: 600;
-    //                 font-size: 16px;
-    //                 position: relative;
-    //                 z-index: 1;
-    //                 transition: background 0.3s ease;
-    //             }
-
-    //             .button-indicator {
-    //                 background: var(--maroon);
-    //                 position: absolute; /* Position it absolutely within the ul */
-    //                 top: 0; /* Start from the top */
-    //                 left: 0; /* Align to the left */
-    //                 width: 100%; /* Full width */
-    //                 height: 25%; /* Height of one button */
-    //                 transition: top 0.3s ease; /* Smooth transition for sliding */
-    //                 z-index: 9; /* Place the indicator behind the buttons */
-    //             }
-    //         }
-    //     }
-
-    //     .bottom {
-    //         position: absolute;
-    //         bottom: 0;
-    //         margin-bottom: 30px;
-    //     }
-    // }
-
     nav {
         margin: 50px 0 0 0;
         text-align: center;
@@ -224,7 +161,7 @@ body {
 }
 
 .hero {
-    width: calc(100vw - var(--lbarwidth) - var(--rbarwidth));
+    width: calc(100vw - var(--lbarwidth));
 
     .container {
 
@@ -246,38 +183,73 @@ body {
             }
         }
 
-        .menu {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-            white-space: nowrap;
-
-            .box {
-                background: white;
-                margin: 10px;
-                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                border-radius: 20px;
-        
-                .box-container {
-                    height: var(--menubox);
-                    width: var(--menubox);
-        
-                    img {
-                        height: var(--menuicons);
-                        padding: 10px;
-                    }
-        
-                    h1 {
-                        padding-left: 10px;
-                        font-size: 14px;
+        @media screen and (max-width: 1280px) {
+            .menu {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 100%;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+    
+                .box {
+                    border: none;
+                    text-align: left;
+                    background: white;
+                    margin: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    border-radius: 20px;
+            
+                    .box-container {
+                        height: var(--menubox);
+                        width: var(--menubox);
+            
+                        img {
+                            height: var(--menuicons);
+                            padding: 10px;
+                        }
+            
+                        h1 {
+                            padding-left: 10px;
+                            font-size: 14px;
+                        }
                     }
                 }
             }
         }
 
+        @media screen and (min-width: 1280px) {
+            .menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+    
+                .box {
+                    border: none;
+                    text-align: left;
+                    background: white;
+                    margin: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    border-radius: 20px;
+            
+                    .box-container {
+                        height: var(--menubox);
+                        width: var(--menubox);
+            
+                        img {
+                            height: var(--menuicons);
+                            padding: 10px;
+                        }
+            
+                        h1 {
+                            padding-left: 10px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
         .list {
             display: flex;
             flex-direction: row;
@@ -483,7 +455,7 @@ body {
 
         .queue {
             width: 100%;
-            height: 400px;
+            height: calc(100vh - 390px);
             overflow-x: hidden;
             overflow-y: auto;
             white-space: nowrap;
@@ -553,8 +525,18 @@ body {
                 border: 1px solid rgba(0, 0, 0, 0.4);
             }
 
-            h2 {
-                margin: 5px 0;
+            .top {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+
+            .bottom {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
             }
         }
 
@@ -566,6 +548,13 @@ body {
             border-radius: 10px;
             text-align: center;
             font-weight: 600;
+            width: 100%;
+            border: none;
+            transition: all 80ms ease-in-out;
+        }
+
+        .placeorder:hover {
+            background: var(--menu);
         }
     }
 }
