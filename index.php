@@ -1,4 +1,9 @@
-
+<!-- 
+    FCAT Point Of Sales Front End
+    Copyright (c) Dalumpines, Eunicys S.
+    Date Developed : August 2024
+    https://github.com/sycinue-rdc
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +26,7 @@
             <h1>FCAT POS</h1>
         </header>
 
+        <!-- NAVIGATION LIST -->
         <nav>
             <ul class="top">
                 <div class="button-indicator"></div>
@@ -30,6 +36,7 @@
                 <li><button id="settings"><img src="assets/imgs/menu.png" alt="icon" class="icon">Settings</button></li>
             </ul>
 
+            <!-- LOG OUT BUTTON -->
             <ul class="bottom">
             <li><button id="logout"><img src="assets/imgs/menu.png" alt="icon" class="icon">Logout</button></li>
             </ul>
@@ -38,13 +45,16 @@
 
     <div class="hero" id="hero">
         <div class="container">
-            <div class="burger"></div>
 
+            <!-- SEARCH BAR -->
             <form action="" method="post">
                 <input type="search" name="search" id="search" class="search" placeholder="Search...">
             </form>
 
+            <!-- CATEGORIES MENU -->
             <section class="menu">
+
+                <!-- CATEGORY MENU CONTAINER -->
                 <button class="box">
                     <div class="box-container">
                         <img src="assets/imgs/menu.png" alt="icon" class="icon">
@@ -87,7 +97,10 @@
 
             </section>
 
+            <!-- MENU TABLE LIST DISPLAY -->
             <section class="list">
+
+                <!-- MENU CONTAINER -->
                 <div class="box">
                     <div class="box-container">
                         <img src="assets/imgs/cluckinbig.jpg" alt="icon" class="icon">
@@ -105,14 +118,15 @@
                                 <button class="plus" aria-label="Increase">&plus;</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
             </section>
 
+            <!-- TABLE QUEUE LIST DISPLAY -->
             <section class="tables">
                 
+                <!-- TABLE QUEUE LIST DISPLAY CONTAINER -->
                 <div class="table">
                     <div class="table-container">
                         <h1>T1</h1>
@@ -120,50 +134,30 @@
                     </div>
                 </div>
 
-                <div class="table">
-                    <div class="table-container">
-                        <h1>T2</h1>
-                        <p>Joshua</p>
-                    </div>
-                </div>
-
-                <div class="table">
-                    <div class="table-container">
-                        <h1>T3</h1>
-                        <p>Menard</p>
-                    </div>
-                </div>
-
-                <div class="table">
-                    <div class="table-container">
-                        <h1>T4</h1>
-                        <p>Kim</p>
-                    </div>
-                </div>
-
-                <div class="table">
-                    <div class="table-container">
-                        <h1>T5</h1>
-                        <p>Vergel</p>
-                    </div>
-                </div>
             </section>
         </div>
     </div>
 
     <div class="orderqueue" id="ordrlist" style="display: none;">
         <div class="container">
+            <!-- TABLE INFORMATION -->
             <header>
-                <h1>Table 6</h1>
-                <p>Shairence</p>
+                <h1>Table ${tablenumber}</h1>
+                <p>${customername}</p>
             </header>
 
+            <!-- ORDER ACTION / METHOD -->
             <div class="method">
                 <div class="indicator"></div>
+
+                <!-- DINE IN BUTTON-->
                 <button id="dineIn" class="active">Dine In</button>
+
+                <!-- TAKE OUT BUTTON -->
                 <button id="takeOut">Take Out</button>
             </div>
 
+            <!-- QUEUE BOX OR ORDER BASKET -->
             <div class="queue">
                 <div class="box">
                     <div class="box-container">
@@ -181,28 +175,37 @@
                 </div>
             </div>
 
+            <!-- ITEM PRICE CALCULATION SECTION -->
             <div class="itmpricecalc">
+
                 <div class="top">
+                    <!-- HEADERS -->
                     <div class="left">
                         <h2 class="sub-ttl">Sub-Total</h2>
                         <h2 class="tax">Tax %</h2>
                     </div>
+
+                    <!-- CALCULATION VALUES -->
                     <div class="right">
                         <h2>${subttlvalue}</h2>
                         <h2>${taxvalue}</h2>
                     </div>
                 </div>
                 <hr>
+
+                <!-- TOTAL CALCULATION -->
                 <div class="bottom">
                     <h2 class="ttlprice">Total Amount</h2>
                     <h2>${ttlamountvalue}</h2>
                 </div>
             </div>
 
+            <!-- PLACE ORDER BUTTON -->
             <button class="placeorder" id="placeOrder">Place Order</button>
         </div>
     </div>
 
+    <!-- JAVASCRIPT -->
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>

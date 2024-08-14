@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////
+// FCAT Point Of Sales Front End                     //
+// Copyright (c) Dalumpines, Eunicys S.              //
+// Date Developed : August 2024                      //
+// https://github.com/sycinue-rdc                    //
+///////////////////////////////////////////////////////
+
 // ======================================================= Menu Buttons
 const buttons = document.querySelectorAll('.top button');
 const menuIndicator = document.querySelector('.button-indicator');
